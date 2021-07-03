@@ -6,10 +6,18 @@
 
 - Ruby v2.7.0
 - Ruby on Rails v5.2.4
+- Visual Studio Code
+- Git
+- GitHub
+
+## Linters
+
+- Rubocop
+- Stylelint
 
 ## Live Demo
 
-TBA
+TBA - Not available yet
 
 
 ## Getting Started

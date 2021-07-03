@@ -20,10 +20,18 @@ class PostsController < ApplicationController
   private
 
   def timeline_posts
-    @timeline_posts ||= Post.all.ordered_by_most_recent.includes(:user)
-    timeline_users = [current_user.id]
-    timeline_users += current_user.friends.map(&:id)
-    @timeline_posts ||= Post.where(user_id: timeline_users).ordered_by_most_recent.includes(:user)
+    @friends = []
+    Friendship.all.each do |single_friendship|
+      if single_friendship.confirmed == true
+        if single_friendship.user_id == current_user.id
+          @friends.append(single_friendship.friend_id)
+        elsif single_friendship.friend_id == current_user.id
+          @friends.append(single_friendship.user_id)
+        end
+      end
+    end
+    @friends.append(current_user.id)
+    @timeline_posts = Post.where(user_id: @friends).ordered_by_most_recent
   end
 
   def post_params

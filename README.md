@@ -79,7 +79,17 @@ TBA
 
 ## Authors
 
-TBA
+👤 **Fondem Junior**
+
+- [Github](https://github.com/Fondem-Jr)
+- [Linkedin](https://www.linkedin.com/in/fondem-junior-57484744/)
+- [Twitter](https://twitter.com/OpportunistZeus)
+
+👤 **Dante Alonso**
+
+- GitHub: [@DanteAlonsoHT](https://github.com/DanteAlonsoHT)
+- Twitter: [@dante_dante1](https://twitter.com/dante_dante1)
+- LinkedIn: [Dante Alonso](https://www.linkedin.com/in/dante-hernandez99/)
 
 ## 🤝 Contributing
 
@@ -93,9 +103,10 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-TBA
+- [Microverse](https://www.microverse.org/)
+- [The Odin Project](https://www.theodinproject.com/courses/ruby-on-rails/lessons/associations)
 
 ## 📝 License
 
-TBA
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
 

@@ -2,6 +2,8 @@
 
 > This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
 
+In this repository, you can find a social media web app created using Ruby on Rails, you can create your own account using devise gem in the back-end, once you got an account, you can send friendship requests to anybody who you want to add to see him in your timeline.
+
 ## Built With
 
 - Ruby v2.7.0

@@ -6,25 +6,23 @@ RSpec.describe Comment, type: :model do
   let(:post1) { user1.posts.create(content: 'This is only an example') }
   let(:comment1) { Comment.create(content: 'This is only an example') }
   let(:comment2) { Comment.create(content: 'This is only an example') }
-  let(:comment3) { Comment.create(content: nil ) }
+  let(:comment3) { Comment.create(content: nil) }
 
-  describe "Comment can be valid if content is not nil" do
-    it "Valid is expected when content is not nil" do
+  describe 'Comment can be valid if content is not nil' do
+    it 'Valid is expected when content is not nil' do
       comment1.post_id = post1.id
       comment1.user = user1
       comment1.save
       expect(comment1).to be_valid
     end
 
-    it "Not valid is expected when content is nil" do
+    it 'Not valid is expected when content is nil' do
       comment3.post_id = post1.id
       comment3.user = user1
       comment3.save
       expect(comment3.invalid?).to eq(true)
     end
-    
   end
-  
 
   describe 'Post can have a comment' do
     it 'User can create a comment inside post' do

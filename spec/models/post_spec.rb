@@ -20,7 +20,7 @@ RSpec.describe Post, type: :model do
   describe 'Post can be created by user if it has nil content' do
     it '0 is expected if user try to create a post with nil content' do
       user1.posts.create(content: nil)
-      
+
       expect(Post.where(user_id: user1.id).count).to eq(0)
     end
   end

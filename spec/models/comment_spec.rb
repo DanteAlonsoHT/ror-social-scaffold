@@ -15,7 +15,9 @@ RSpec.describe Comment, type: :model do
       comment1.save
       expect(comment1).to be_valid
     end
+  end
 
+  describe 'Comment can be invalid if content is nil' do
     it 'Not valid is expected when content is nil' do
       comment3.post_id = post1.id
       comment3.user = user1
@@ -32,7 +34,9 @@ RSpec.describe Comment, type: :model do
 
       expect(post1.comments.count).to eq(1)
     end
+  end
 
+  describe 'Post can have more than 1 comment' do
     it 'User can create one or more comments in the same post' do
       comment1.post_id = post1.id
       comment1.user = user2

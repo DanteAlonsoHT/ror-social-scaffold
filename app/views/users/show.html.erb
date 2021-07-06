@@ -1,23 +1,7 @@
 <section class="user-section">
   <h1><%= "Name: #{@user.name}" %></h1>
 
-  <% if current_user.id == @user.id %>
-  <div>
-    <h5 class="text-muted"> Friend requests found: <%= @user.friend_requests.count %> </h5>
-    <% @user.friend_requests.each do |friendship| %>
-      <p> 
-        Hey! <%= friendship.user.name %> wants to be your friend! <br>
-        <%= accept_friendship(friendship) %> or <%= reject_friendship(friendship) %>    
-      </p>
-    <% end %>
-  </div>
-  <% end %>
-
-  <% if current_user.name == @user.name %>
-  <h4 class="my-5"> Welcome! you're in your own profile </h4>
-  <% else %>
-  <h4 class="my-5"><%= "You're in #{@user.name} profile" %> <span> <%= invite_or_pending_btn(@user) %></span></h4>
-  <% end %>
+  <%= render 'profile_status' %>
 
   <article class="timeline">
     <h3>Recent posts:</h3>

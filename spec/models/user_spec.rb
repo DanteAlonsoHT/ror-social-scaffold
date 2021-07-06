@@ -28,4 +28,13 @@ RSpec.describe User, type: :model do
       expect(user1.pending_friends.count).to eq(1)
     end
   end
+
+  describe 'User can accept a friendship' do
+    it '0 missing friendships if user only had 1 request friendship' do
+      user1.friendships.create(friend_id: user2.id)
+      user2.confirm_friend(user1)
+
+      expect(user1.pending_friends.count).to eq(0)
+    end
+  end
 end

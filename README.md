@@ -2,14 +2,24 @@
 
 > This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
 
+In this repository, you can find a social media web app created using Ruby on Rails, you can create your own account using devise gem in the back-end, once you got an account, you can send friendship requests to anybody who you want to add to see him in your timeline.
+
 ## Built With
 
 - Ruby v2.7.0
 - Ruby on Rails v5.2.4
+- Visual Studio Code
+- Git
+- GitHub
+
+## Linters
+
+- Rubocop
+- Stylelint
 
 ## Live Demo
 
-TBA
+TBA - Not available yet
 
 
 ## Getting Started
@@ -71,7 +81,17 @@ TBA
 
 ## Authors
 
-TBA
+👤 **Fondem Junior**
+
+- [Github](https://github.com/Fondem-Jr)
+- [Linkedin](https://www.linkedin.com/in/fondem-junior-57484744/)
+- [Twitter](https://twitter.com/OpportunistZeus)
+
+👤 **Dante Alonso**
+
+- GitHub: [@DanteAlonsoHT](https://github.com/DanteAlonsoHT)
+- Twitter: [@dante_dante1](https://twitter.com/dante_dante1)
+- LinkedIn: [Dante Alonso](https://www.linkedin.com/in/dante-hernandez99/)
 
 ## 🤝 Contributing
 
@@ -85,9 +105,10 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-TBA
+- [Microverse](https://www.microverse.org/)
+- [The Odin Project](https://www.theodinproject.com/courses/ruby-on-rails/lessons/associations)
 
 ## 📝 License
 
-TBA
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
 

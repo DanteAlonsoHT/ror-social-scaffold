@@ -15,4 +15,48 @@ module ApplicationHelper
       link_to('Like!', post_likes_path(post_id: post.id), method: :post)
     end
   end
+
+  def current_user_or_friend?(user)
+    current_user == user || current_user.friend?(user)
+  end
+
+  def invite_or_pending_btn(user)
+    return if current_user_or_friend?(user)
+
+    if current_user.pending_friends.include?(user)
+      'Friendship pending'
+    else
+      unless current_user.pending_friendship?(user)
+        button_to('Send friendship', user_friendships_path(user_id: user.id), method: :post)
+      end
+    end
+  end
+
+  def accept_friendship_with_user(user)
+    return if current_user_or_friend?(user)
+    return unless current_user.pending_friendship?(user)
+
+    friendship = current_user.pending_friendship(user)
+    link_to('Accept', user_friendship_path(friendship.user, friendship.id), method: :put, class: 'profile-link')
+  end
+
+  def reject_friendship_with_user(user)
+    return if current_user_or_friend?(user)
+    return unless current_user.pending_friendship?(user)
+
+    friendship = current_user.pending_friendship(user)
+    link_to('Reject', user_friendship_path(friendship.user, friendship.id), method: :delete, class: 'profile-link')
+  end
+
+  def accept_friendship(friendship)
+    return unless current_user == @user
+
+    link_to('Accept', user_friendship_path(friendship.user, friendship.id), method: :put, class: 'profile-link')
+  end
+
+  def reject_friendship(friendship)
+    return unless current_user == @user
+
+    link_to('Reject', user_friendship_path(friendship.user, friendship.id), method: :delete, class: 'profile-link')
+  end
 end

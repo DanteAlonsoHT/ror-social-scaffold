@@ -5,6 +5,7 @@
     </div>
     <div class='post-liking'>
       <span class='post-date'> <%= post.created_at.strftime("%Y/%m/%d") %> </span>
+      <%= Like.where(post_id: post.id).count %> likes
       <%= like_or_dislike_btn(post) %>
     </div>
   </div>

@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap");
 
-$primary-color-dark: #689f38;
-$primary-color: #8bc34a;
-$primary-color-light: #dcedc8;
+$primary-color-dark: #303841;
+$primary-color: #00adb5;
+$primary-color-light: #eee;
 $primary-color-text: #212121;
-$divider-color: #bdbdbd;
+$divider-color: #ff5722;
 
 * {
   margin: 0;
@@ -49,7 +49,7 @@ a {
   }
 
   .active a {
-    color: #fff;
+    color: $primary-color;
   }
 
   a:hover {

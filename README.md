@@ -1,3 +1,5 @@
+![](https://img.shields.io/badge/Microverse-blueviolet)
+
 # Scaffold for social media app with Ruby on Rails
 
 > This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
@@ -17,9 +19,9 @@ In this repository, you can find a social media web app created using Ruby on Ra
 - Rubocop
 - Stylelint
 
-## Live Demo
+## Live Demo 👀
 
-TBA - Not available yet
+[Live Demo Link](https://kensayo.github.io/NWK-wk3/)
 
 
 ## Getting Started

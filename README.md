@@ -21,7 +21,7 @@ In this repository, you can find a social media web app created using Ruby on Ra
 
 ## Live Demo 👀
 
-[Live Demo Link](https://kensayo.github.io/NWK-wk3/)
+[Live Demo Link](https://ror-social-scaffold-production.herokuapp.com/)
 
 
 ## Getting Started
